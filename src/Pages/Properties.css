@@ -1,0 +1,451 @@
+.properties-page {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+
+    padding: 55px 0 80px;
+
+    min-height: 100vh;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.properties-header {
+    margin-bottom: 32px;
+}
+
+.properties-label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: #777;
+}
+
+.properties-header h1 {
+    margin: 0;
+
+    font-size: 42px;
+    letter-spacing: -1px;
+}
+
+.properties-header p {
+    margin: 10px 0 0;
+
+    color: #666;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   FILTER PANEL
+========================= */
+
+.filter-panel {
+    display: grid;
+
+    grid-template-columns:
+        1.5fr
+        1fr
+        1fr
+        0.8fr
+        1fr
+        auto;
+
+    gap: 12px;
+
+    padding: 18px;
+
+    margin-bottom: 35px;
+
+    border: 1px solid #e6e6e6;
+    border-radius: 16px;
+
+    background: #fff;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.04);
+}
+
+.filter-field label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #555;
+}
+
+.filter-field input,
+.filter-field select {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 11px 12px;
+
+    border: 1px solid #ddd;
+    border-radius: 9px;
+
+    background: #fff;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+.filter-field input:focus,
+.filter-field select:focus {
+    border-color: #222;
+}
+
+.filter-actions {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.apply-filter-button,
+.clear-filter-button {
+    height: 42px;
+
+    padding: 0 17px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.apply-filter-button {
+    border: 1px solid #222;
+
+    background: #222;
+    color: white;
+}
+
+.apply-filter-button:hover {
+    background: #000;
+}
+
+.clear-filter-button {
+    border: 1px solid #ddd;
+
+    background: white;
+    color: #333;
+}
+
+.clear-filter-button:hover {
+    border-color: #222;
+}
+
+
+/* =========================
+   RESULTS HEADER
+========================= */
+
+.results-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 24px;
+}
+
+.results-header h2 {
+    margin: 0;
+
+    font-size: 22px;
+}
+
+.results-header p {
+    margin: 6px 0 0;
+
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.properties-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 26px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.property-card {
+    display: block;
+
+    color: inherit;
+    text-decoration: none;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.property-card-image {
+    height: 230px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background: #f2f2f2;
+}
+
+.property-card-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.3s ease;
+}
+
+.property-card:hover
+.property-card-image img {
+    transform: scale(1.04);
+}
+
+.property-no-image {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #888;
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.property-card-content {
+    padding: 13px 2px;
+}
+
+.property-card-heading {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+.property-card-heading h3 {
+    margin: 0;
+
+    font-size: 16px;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+.property-card-heading strong {
+    flex-shrink: 0;
+
+    font-size: 14px;
+}
+
+.property-card-heading small {
+    font-weight: 400;
+
+    color: #777;
+}
+
+.property-card-location,
+.property-card-guests {
+    margin: 7px 0 0;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   STATES
+========================= */
+
+.properties-message {
+    min-height: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: #666;
+}
+
+.properties-message h3 {
+    margin: 10px 0 5px;
+
+    color: #222;
+}
+
+.properties-message p {
+    margin: 5px 0 18px;
+}
+
+.properties-message.error {
+    color: #b42318;
+}
+
+.properties-message.error h3 {
+    color: #b42318;
+}
+
+.properties-message button {
+    padding: 10px 17px;
+
+    border: 1px solid #222;
+    border-radius: 9px;
+
+    background: #222;
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+.empty-icon {
+    font-size: 44px;
+}
+
+.loading-spinner {
+    width: 30px;
+    height: 30px;
+
+    border: 3px solid #ddd;
+    border-top-color: #222;
+
+    border-radius: 50%;
+
+    animation: properties-spin 0.8s linear infinite;
+}
+
+@keyframes properties-spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .filter-panel {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .filter-actions {
+        align-items: center;
+    }
+
+    .properties-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .properties-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .properties-page {
+        padding-top: 35px;
+    }
+
+    .properties-header h1 {
+        font-size: 34px;
+    }
+
+    .filter-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-actions {
+        align-items: stretch;
+    }
+
+    .apply-filter-button,
+    .clear-filter-button {
+        flex: 1;
+    }
+
+    .properties-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .property-card-image {
+        height: 250px;
+    }
+
+}
